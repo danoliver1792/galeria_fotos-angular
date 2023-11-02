@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html ng-app="galleryApp">
+    <head>
+        <meta charset="UTF-8">
+        <title>Galeria de Fotos</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="GalleryController">
+        <h1>Galeria de Fotos</h1>
+        <input type="file" id="fileInput" ng-file-model="newImage" accept="image/*"/>
+        <button ng-click="uploadImage()">Fazer Upload</button>
+        <div class="thumbnails">
+            <div ng-repeat="photo in photos">
+                <a ng-href="{{ photo.url }}" target="_blank">{{ photo.name }}</a>
+            </div>
+        </div>
+    </body>
+</html>
