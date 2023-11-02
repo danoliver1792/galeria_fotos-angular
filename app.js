@@ -7,6 +7,11 @@ app.controller("GalleryController", function($scope, $http) {
     const cloudName = "Untitled";
     const uploadPreset = "ml_default";
 
+    $scope.chooseImage = function() {
+        const fileInput = document.getElementById("fileInput");
+        fileInput.click();
+    };
+
     $scope.uploadImage = function() {
         const fileInput = document.getElementById("fileInput");
         const file = fileInput.files[0];

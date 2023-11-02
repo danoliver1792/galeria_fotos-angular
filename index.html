@@ -9,7 +9,8 @@
     </head>
     <body ng-controller="GalleryController">
         <h1>Galeria de Fotos</h1>
-        <input type="file" id="fileInput" ng-file-model="newImage" accept="image/*"/>
+        <input type="file" id="fileInput" accept="image/*" style="display: none;"/>
+        <button ng-click="chooseImage()">Escolher Imagem</button>
         <button ng-click="uploadImage()">Fazer Upload</button>
         <div class="thumbnails">
             <div ng-repeat="photo in photos">
